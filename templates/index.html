@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Joke Generator</title>
+    <style>
+        body {
+            text-align: center;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            word-wrap: normal;
+        }
+    </style>
+</head>
+<body>
+    <form action="/" method="post">
+        <label for="">Enter your joke's topic:</label>
+        <input type="text" name="prompt" id="prompt">
+        <br>
+        <button type="submit" value="Submit">Generate</button>
+    </form>
+    {% if jokes %}
+    <br>
+    <div>
+    {{ jokes | safe }}
+    </div>
+    {% endif %}
+</body>
+</html>
